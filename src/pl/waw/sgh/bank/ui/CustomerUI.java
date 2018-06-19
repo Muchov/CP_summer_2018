@@ -1,3 +1,5 @@
+//only button NEW works
+
 package pl.waw.sgh.bank.ui;
 
 import pl.waw.sgh.bank.Account;
@@ -38,7 +40,7 @@ public class CustomerUI {
         newButton.addActionListener(new ActionListener() {              //this newbutton clears fields and sets a new id
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                curCust = bank.createCustomer("","","");
+                curCust = bank.createCustomer("", "", "");
                 displayCustomer(curCust.getCustomerID());
             }
         });
@@ -52,7 +54,7 @@ public class CustomerUI {
                     curCust.setFirstName(fn);
                     curCust.setLastName(ln);
                     curCust.setEmail(em);
-                    //curCust = bank.createCustomer(fn, ln, em);
+                    curCust = bank.createCustomer(fn, ln, em);
                     JOptionPane.showMessageDialog(null, bank);
                 }
                 if (fn.equals("") & ln.equals("") & em.equals("")) {
@@ -102,8 +104,8 @@ public class CustomerUI {
                         tempId = 0;
                     }
                     displayCustomer(bank.getCustList().get(tempId).getCustomerID());
-                    //JOptionPane.showMessageDialog(customerMainPanel, bank.findCustomerById(tempId));
-                    //idTextField.setText(Integer.toString(tempId));
+                    JOptionPane.showMessageDialog(customerMainPanel, bank.findCustomerById(tempId));
+                    idTextField.setText(Integer.toString(tempId));
                 } else {
                     JOptionPane.showMessageDialog(customerMainPanel, bank.getCustList().get(tempCust.getCustomerID()));
                     idTextField.setText(Integer.toString(tempCust.getCustomerID()));
@@ -218,8 +220,6 @@ public class CustomerUI {
 
         }
     }
-
-
 
 
     /**

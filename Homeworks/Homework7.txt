@@ -1,5 +1,0 @@
-Exception handling - not obligatory - extra 2 points.
-
-Add code that will handle exceptions for cases:
-1. Negative amount passed to charge/deposit/transfer
-2. Account used in transfer does not exist

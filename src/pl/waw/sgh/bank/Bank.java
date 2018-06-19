@@ -36,7 +36,7 @@ public class Bank {
     public Customer createCustomer(String firstName,
                                    String lastName,
                                    String email) {
-        Customer customer = new Customer(lastCustID++,firstName, lastName, email);
+        Customer customer = new Customer(lastCustID++, firstName, lastName, email);
         custList.add(customer);
         return customer;
     }
@@ -68,9 +68,9 @@ public class Bank {
 
     public Account createAccount(Customer customer, boolean isSavings) {
         Account account = (isSavings ?
-                            new SavingsAccount(lastAccID++, new BigDecimal(0), customer)
-                            :
-                            new DebitAccount(lastAccID++, new BigDecimal(0), customer)
+                new SavingsAccount(lastAccID++, new BigDecimal(0), customer)
+                :
+                new DebitAccount(lastAccID++, new BigDecimal(0), customer)
         );
         accList.add(account);
         return account;
@@ -83,25 +83,12 @@ public class Bank {
         fromAcc.charge(amount);
         toAcc.deposit(amount);
     }
-/*
-
-    public void transfer(Integer fromAccId, Integer toAccId, double amount) {
-        Account fromAcc = findAccountById(fromAccId);
-        Account toAcc = findAccountById(toAccId);
-        int res = fromAcc.charge(amount);
-        if (res<0) {
-            System.out.println("Not enough money");
-            System.exit(res);
-        }
-        toAcc.deposit(amount);
-    }
-*/
 
     public Account findAccountById(int id) throws NonExistantAccountException {
         // iterate through the account list and return the account with a given id
         for (Account acc : accList) {
             //if (id.equals(acc.getAccountID()))
-            if (id==acc.getAccountID())
+            if (id == acc.getAccountID())
                 return acc;
         }
         throw new NonExistantAccountException("Account id: " + id + " does not exist!");
@@ -123,7 +110,7 @@ public class Bank {
 
     public Customer findCustomerById(int id) {
         for (Customer cust : custList) {
-            if (id==cust.getCustomerID())
+            if (id == cust.getCustomerID())
                 return cust;
         }
         return null;
