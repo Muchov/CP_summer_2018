@@ -16,16 +16,27 @@ public class Portfolio {
         this.stock = new HashMap<>();
     }
 
-    public boolean addProduct(int id, Money price, int qty) {
+    /*
+    Here we create a stock with given ID
+    */
+
+    public boolean addStockID(int id, Money price, int qty) {
+
         if (this.stock.containsKey(id)) {
             return false;
+
         } else {
             this.stock.put(id, new Stock(id, price, qty));
             return true;
         }
     }
 
+    /*
+    Here we can add more quantity to a given StockID
+    */
+
     public boolean addStock(int id, int howMany) {
+
         if (!this.stock.containsKey(id)) {
             return false;
         }
@@ -35,7 +46,12 @@ public class Portfolio {
 
     }
 
+    /*
+    Here we can reduce quantity of a given StockID
+    */
+
     public boolean reduceStock(int id, int howMany) {
+
         if (!this.stock.containsKey(id)) {
             return false;
         }
@@ -43,7 +59,12 @@ public class Portfolio {
         return this.stock.get(id).removeStock(howMany);
     }
 
-    public boolean removeProduct(int id) {
+    /*
+    Here we can remove a given StockID from our portfolio.
+    */
+
+    public boolean removeStockID(int id) {
+
         if (!this.stock.containsKey(id)) {
             return false;
         }
@@ -51,9 +72,15 @@ public class Portfolio {
         return true;
     }
 
-    public void printTotalValueStock(int id) {
+    /*
+    Here we can print total value of a given StockID
+    */
+
+    public void printTotalValueStockID(int id) {
+
         if (!this.stock.containsKey(id)) {
             System.out.println("No product found.");
+
         } else {
             System.out.println("Product id: " + id +
                     " Available: " + this.stock.get(id).getQty() +
@@ -61,7 +88,11 @@ public class Portfolio {
         }
     }
 
-    public void printTotalValueNoOfStocks() {
+    /*
+    Total value of our portfolio.
+    */
+
+    public void printTotalValueOfOurPortfolio() {
         Money total = new Money(0, 0);
 
         for (Stock aProduct : this.stock.values()) {

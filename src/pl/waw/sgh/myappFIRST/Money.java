@@ -13,19 +13,38 @@ public class Money {
     private final int dollars;
     private final int cents;
 
+    /*
+    Definition of what money is. It consists of dollars and cents.
+    */
+
     public Money(int dollars, int cents) {
         this.dollars = dollars;
         this.cents = cents;
 
     }
 
+    /*
+    Dollar definition
+    */
+
     public int dollars() {
         return dollars;
     }
 
+    /*
+    What are cents
+    */
+
     public int cents() {
         return cents;
     }
+
+    /*
+    A problem was encountered and here is the fix. As we know, if we have one dollar and one cent,
+    we write : 1.01$ not 1.1$. Code was creating the "1.1$" number. So we need to fix it. An idea is
+    that if we have cents below 10, we add zero before the number of cents. If its higher than 10,
+    then we have no problem.
+    */
 
     @Override
     public String toString() {
@@ -35,57 +54,48 @@ public class Money {
         }
 
         return dollars + "." + zero + cents;
+
     }
 
+    /*
+    Another problem with defining money is our money system. 100 cents equals 1 dollar.
+    Computer don't really know that, so we need to tell him to do so. If we type for example 150 cents,
+    it will add 1 to the dollar and subtract 100 from cents. If we type e.g. 5000,
+    it wil change it to 50 dollars performing iterations.
+    */
+
     public Money plus(Money added) {
+
         int dollars_helper = 0;
         int cent_helper = 0;
+
         if ((this.cents() + added.cents()) > 100) {
             dollars_helper = 1;
             cent_helper = (this.cents() + added.cents()) - 100;
+
         } else
+
             cent_helper = this.cents() + added.cents();
 
         return new Money(this.dollars() + added.dollars() + dollars_helper,
                 cent_helper);
     }
 
-    public boolean less(Money compared) {
-        if (this.dollars() < compared.dollars())
-            return true;
-        else if (this.dollars() > compared.dollars())
-            return false;
-        else {
-            return this.cents() < compared.cents();
-        }
-    }
-
-    public Money minus(Money decremented) {
-        int dollars_helper = 0;
-        int cent_helper = 0;
-        if (this.less(decremented))
-            return new Money(0, 0);
-        else {
-            if (this.cents() < decremented.cents()) {
-                dollars_helper = -1;
-                cent_helper = (100 + this.cents()) - decremented.cents();
-            } else
-                cent_helper = this.cents() - decremented.cents();
-
-            dollars_helper += (this.dollars() - decremented.dollars());
-            return new Money(dollars_helper, cent_helper);
-        }
-    }
+    /*
+    Stock multiplication code
+    */
 
     public Money multiplyBy(int qty) {
         Money total = new Money(this.dollars, this.cents);
 
         for (int i = 1; i < qty; i++) {
             total = total.plus(this);
-        }
-        return total;
-    }
 
+        }
+
+        return total;
+
+    }
 
 }
 
