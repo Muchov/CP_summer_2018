@@ -46,6 +46,10 @@ public class Stock {
     Here we can get a total value fo stocks of a given ID number.
     */
 
+    public Money getPrice() {
+        return this.price;
+    }
+
     public Money getTotalValue() {
         return this.price.multiplyBy(this.qty);
     }

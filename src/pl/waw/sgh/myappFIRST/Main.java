@@ -57,8 +57,9 @@ public class Main {
             System.out.println("    Enter 2 to add more stocks for a given stock ID.");
             System.out.println("    Enter 3 to reduce amount of stocks for a given stock ID");
             System.out.println("    Enter 4 to remove a stock from the portfolio.");
-            System.out.println("    Enter 5 to calculate total value certain stock.");
+            System.out.println("    Enter 5 to calculate total value of a certain stock.");
             System.out.println("    Enter 6 to calculate overall value of the portfolio.");
+            System.out.println("    Enter 7 to get info about stock.");
             System.out.println("    Enter \"q\" to quit the PortfolioManager.");
 
             System.out.print(">>");
@@ -120,23 +121,35 @@ public class Main {
                     break;
 
                 /*
-                Fifth number (case) prints value of a defined stock ID. It's defined in "Portfolio" class.
+                Fifth number (case) prints for us the information about Stock
                 */
 
                 case "5":
 
                     int id5 = onlyCheckInt(reader, qId);
-                    stock.printTotalValueStockID(id5);
+                    stock.printStockInformation(id5);
                     break;
 
+
                 /*
-                Sixth number (case) prints out TotalValue of our Portfolio. It's defined in "Portfolio" class.
+                Sixth number (case) prints value of a defined stock ID. It's defined in "Portfolio" class.
                 */
 
                 case "6":
 
+                    int id6 = onlyCheckInt(reader, qId);
+                    stock.printTotalValueStockID(id6);
+                    break;
+
+                /*
+                Seventh number (case) prints out TotalValue of our Portfolio. It's defined in "Portfolio" class.
+                */
+
+                case "7":
+
                     stock.printTotalValueOfOurPortfolio();
                     break;
+
 
                 /*
                 Last case quits the PortfolioManager. It changes the parameter working

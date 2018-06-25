@@ -79,12 +79,27 @@ public class Portfolio {
     public void printTotalValueStockID(int id) {
 
         if (!this.stock.containsKey(id)) {
-            System.out.println("No product found.");
+            System.out.println("No stock of given ID found!");
 
         } else {
-            System.out.println("Product id: " + id +
+            System.out.println("Stock id: " + id +
+                    " Total value: " + this.stock.get(id).getTotalValue() + " $");
+        }
+    }
+
+    /*
+    Here we can print information about a given StockID
+    */
+
+    public void printStockInformation(int id) {
+
+        if (!this.stock.containsKey(id)) {
+            System.out.println("No stock of given ID found!");
+
+        } else {
+            System.out.println("Stock id: " + id +
                     " Available: " + this.stock.get(id).getQty() +
-                    " Total value: " + this.stock.get(id).getTotalValue());
+                    " Price: " + this.stock.get(id).getPrice() + " $");
         }
     }
 
@@ -99,6 +114,6 @@ public class Portfolio {
             total = total.plus(aProduct.getTotalValue());
         }
 
-        System.out.println("Total value of all stocks: " + total);
+        System.out.println("Total value of all stocks: " + total + " $");
     }
 }
