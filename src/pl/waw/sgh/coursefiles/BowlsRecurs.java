@@ -3,8 +3,8 @@ package pl.waw.sgh.coursefiles;
 public class BowlsRecurs {
 
     public static long sumBowls(long row) {
-        if (row==1) return 1;
-        else return sumBowls(row-1) + row;
+        if (row == 1) return 1;
+        else return sumBowls(row - 1) + row;
     }
 
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class BowlsRecurs {
         long startTime = System.currentTimeMillis();
         System.out.println(sumBowls(n));
         long stopTime = System.currentTimeMillis();
-        System.out.println(stopTime-startTime + " ms");
+        System.out.println(stopTime - startTime + " ms");
     }
 
 }

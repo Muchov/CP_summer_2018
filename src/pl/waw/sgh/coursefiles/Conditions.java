@@ -6,7 +6,7 @@ public class Conditions {
     public static int myInt = 7;
 
     public static void main(String[] args) {
-        int a =5;
+        int a = 5;
         {
             int b = 6;
             System.out.println(a);
@@ -35,7 +35,6 @@ public class Conditions {
         } else {
             c = 0;
         }
-
 
 
         //System.out.println(c);

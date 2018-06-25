@@ -28,7 +28,7 @@ public abstract class Account {
     }
 
     public void charge(double amount) throws InvalidAmountException {
-        if (balance.doubleValue()<amount)
+        if (balance.doubleValue() < amount)
             throw new InvalidAmountException(
                     "Not enough money, you tried to charge: " + amount +
                             " only: " + balance + " available");
@@ -77,7 +77,7 @@ public abstract class Account {
 
     @Override
     public String toString() {
-        return "\n" + getClass().getSimpleName().replace("Account","") + "{" +
+        return "\n" + getClass().getSimpleName().replace("Account", "") + "{" +
                 "" + accountID +
                 ", " + balance + " " + currency +
                 ", cust=" + customer.getCustomerID() +

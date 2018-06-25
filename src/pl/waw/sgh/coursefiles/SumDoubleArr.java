@@ -13,7 +13,7 @@ public class SumDoubleArr {
     public static void main(String[] args) {
         //double[] arr = new double[] { 5435, 54.44, 25225.25 };
         double[] dArr = new double[args.length];
-        for (int i=0;i<args.length;i++) {
+        for (int i = 0; i < args.length; i++) {
             try {
                 dArr[i] = Double.parseDouble(args[i]);
             } catch (NumberFormatException ne) {

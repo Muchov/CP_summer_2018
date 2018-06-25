@@ -22,7 +22,7 @@ public class Booleans {
         System.out.println("res1=" + res1);
         System.out.println("res2=" + res2);
 
-        if (res1==true) {
+        if (res1 == true) {
             System.out.println("res1 is true");
         }
 

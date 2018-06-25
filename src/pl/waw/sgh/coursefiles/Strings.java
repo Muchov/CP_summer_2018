@@ -19,7 +19,7 @@ public class Strings {
         System.out.println(s2);
 
         String s3 = s1.concat(s2);  // s1 + s2;
-        String s4 = s1.replace('b','B');
+        String s4 = s1.replace('b', 'B');
         System.out.println(s4);
         char c1 = s1.charAt(2);
         System.out.println(c1);
@@ -36,7 +36,7 @@ public class Strings {
         s1 = "abc";
         System.out.println(s1);
         //s2 = s1;
-       // s2 = "abc";
+        // s2 = "abc";
         s2 = new String("abc");
         System.out.println(s2);
         System.out.println();
@@ -52,7 +52,7 @@ public class Strings {
         String s6 = "Hello World";
         String s7 = s6.substring(7);
         System.out.println(s7);
-        String s8 = s6.substring(0,5);
+        String s8 = s6.substring(0, 5);
         System.out.println(s8);
         //s1.equals()
 

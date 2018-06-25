@@ -10,7 +10,7 @@ public class Arrays {
         iArr[1] = 665;
         iArr[2] = 8987;
 
-        for (int i=0; i<iArr.length; i++) {
+        for (int i = 0; i < iArr.length; i++) {
             System.out.println("element at i " + i + " = " + iArr[i]);
         }
         System.out.println();

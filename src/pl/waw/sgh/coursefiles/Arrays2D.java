@@ -9,11 +9,11 @@ public class Arrays2D {
         arr2D[0][1] = 465;
         arr2D[0][2] = 787;
 
-        arr2D[1] = new int[] { 234, 2124, 6534, 234};
+        arr2D[1] = new int[]{234, 2124, 6534, 234};
 
-        for (int r=0;r<arr2D.length;r++) {
+        for (int r = 0; r < arr2D.length; r++) {
 
-            for (int c=0; c< arr2D[r].length; c++) {
+            for (int c = 0; c < arr2D[r].length; c++) {
                 System.out.print(arr2D[r][c] + "  \t");  // \t - tab, \n - new line
             }
             System.out.println();

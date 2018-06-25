@@ -4,7 +4,7 @@ public class Rectangle extends Shape {
 
     public Rectangle() {
         // call superclass (Shape) constructor
-        super(1,2);
+        super(1, 2);
     }
 
     public Rectangle(double sideA, double sideB) {
@@ -13,7 +13,7 @@ public class Rectangle extends Shape {
 
     @Override
     public double calcSurface() {
-        return parA*parB;
+        return parA * parB;
     }
 
     @Override
@@ -23,6 +23,6 @@ public class Rectangle extends Shape {
 
     @Override
     public double calcPerimeter() {
-        return 2*parA+2*parB;
+        return 2 * parA + 2 * parB;
     }
 }

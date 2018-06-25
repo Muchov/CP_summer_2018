@@ -3,7 +3,7 @@ package pl.waw.sgh.shapes;
 public class PlayWithShapes {
 
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle(4,5);
+        Rectangle r1 = new Rectangle(4, 5);
         //Rectangle r1 = new Rectangle();
         //r1.setParams(4,5);
         System.out.println(r1.calcSurface());
@@ -20,9 +20,9 @@ public class PlayWithShapes {
         System.out.println();
 
         ShapeCalculation[] myShapes = new ShapeCalculation[3];
-        myShapes[0] = new Rectangle(3,4);
+        myShapes[0] = new Rectangle(3, 4);
         myShapes[1] = new Circle(5);
-        myShapes[2] = new Rectangle(6,7);
+        myShapes[2] = new Rectangle(6, 7);
 
         for (ShapeCalculation s : myShapes) {
             System.out.println(s.toString());

@@ -26,7 +26,7 @@ public abstract class Shape implements ShapeCalculation {
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + " [parA=" + parA + ", parB=" + parB + "]";
-                //+ super.toString();
+        //+ super.toString();
     }
 
     @Override

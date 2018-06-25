@@ -7,9 +7,9 @@ import java.util.List;
 public class CompareShapes {
 
     public static void main(String[] args) {
-        Shape s1 = new Rectangle(5,4);
+        Shape s1 = new Rectangle(5, 4);
         Shape s2 = new Circle(4);
-        Shape s3 = new Rectangle(5,6);
+        Shape s3 = new Rectangle(5, 6);
 
         List<Shape> shapeList = new ArrayList<>();
         shapeList.add(s1);
@@ -23,7 +23,7 @@ public class CompareShapes {
 
         Collections.sort(shapeList);
 
-        for (int i=0;i<shapeList.size();i++) {
+        for (int i = 0; i < shapeList.size(); i++) {
             Shape s = shapeList.get(i);
             System.out.println(s.toString());
             System.out.println(s.calcSurface());

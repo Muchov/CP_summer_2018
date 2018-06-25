@@ -28,6 +28,7 @@
 // }
 
 package pl.waw.sgh.Homeworks;
+
 import java.io.*;
 import java.util.Locale;
 import java.util.Scanner;
@@ -48,8 +49,8 @@ public class Homework6 {
                 System.out.println("File updated: " + file.getName());
                 try {
                     copyAndImproveFile(file);
-                }catch (FileNotFoundException e){
-                    System.out.println("File: "+file.getName()+ " not found in "+folder);
+                } catch (FileNotFoundException e) {
+                    System.out.println("File: " + file.getName() + " not found in " + folder);
                 }
             }
         }
@@ -60,17 +61,17 @@ public class Homework6 {
     Here we add the defined "change" to our file.
     */
 
-    public static void copyAndImproveFile (File file) throws FileNotFoundException {
+    public static void copyAndImproveFile(File file) throws FileNotFoundException {
 
         Scanner scanner = new Scanner(file);
 
-        File outfile = new File("C:\\Users\\Maciej Mucha\\Documents\\Homework5\\"+"_"+file.getName());
+        File outfile = new File("C:\\Users\\Maciej Mucha\\Documents\\Homework5\\" + "_" + file.getName());
 
         try {
             FileWriter fw = new FileWriter(outfile);
             BufferedWriter out = new BufferedWriter(fw);
 
-            out.write(scanner.nextLine()+",Percentage Change");
+            out.write(scanner.nextLine() + ",Percentage Change");
             out.newLine();
             while (scanner.hasNext()) {
 
@@ -91,12 +92,12 @@ public class Homework6 {
     Here we define what is the change.
     */
 
-    public static String addPercentageChangeField (String line){
+    public static String addPercentageChangeField(String line) {
         String[] lineSplitted = line.split(",");
         Double openD = Double.parseDouble(lineSplitted[1]);
         Double closeD = Double.parseDouble(lineSplitted[4]);
 
         Double changeD = ((closeD - openD) / openD) * 100;
-        return line+","+String.format(Locale.US, "%.4f", changeD);
+        return line + "," + String.format(Locale.US, "%.4f", changeD);
     }
 }

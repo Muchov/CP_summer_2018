@@ -15,7 +15,7 @@ public class FileReadTxt {
         File myFile = new File(FILE);
         try {
             Scanner scanner = new Scanner(myFile);
-            int i=0;
+            int i = 0;
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
                 i++;

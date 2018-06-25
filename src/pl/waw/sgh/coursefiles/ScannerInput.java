@@ -15,7 +15,7 @@ public class ScannerInput {
         //int age = scanner.nextInt();
         boolean success = false;
 
-        while (success!=true) {  // while (!success)
+        while (success != true) {  // while (!success)
             try {
                 System.out.print("Please give your age: ");
                 scanner = new Scanner(System.in);

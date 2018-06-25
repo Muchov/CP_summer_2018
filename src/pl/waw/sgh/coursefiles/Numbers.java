@@ -17,7 +17,7 @@ public class Numbers {
         int c = a + b;
 
         Integer aa = a;
-        aa = 5656*a;
+        aa = 5656 * a;
         // + - * /
         int a1 = b % a;
         System.out.println("a1=" + a1);
@@ -58,24 +58,15 @@ public class Numbers {
         System.out.println(System.currentTimeMillis());
         System.out.println(curDate);
 
-        Double dd = 5.367347*1e12;
+        Double dd = 5.367347 * 1e12;
 
         Long dd2 = Math.round(dd);
 
         System.out.println(dd);
         System.out.println(dd2);
 
-        double dd4 = Math.pow(2.0,4.0);
+        double dd4 = Math.pow(2.0, 4.0);
         //Math.
-
-
-
-
-
-
-
-
-
 
 
     }

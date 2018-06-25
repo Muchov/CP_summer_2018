@@ -20,7 +20,7 @@ public class FirstWindow {
         }
 
         JFrame myFrame = new JFrame("My Window");
-        myFrame.setSize(400,600);
+        myFrame.setSize(400, 600);
         myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         myFrame.setLayout(new FlowLayout());
 
@@ -53,9 +53,6 @@ public class FirstWindow {
 
         buttonsPanel.add(okButton);
         myFrame.add(buttonsPanel);
-
-
-
 
 
         myFrame.setVisible(true);

@@ -7,12 +7,12 @@ now we specify the type (Equilateral/Isosceles/Scalene)
 
 public class ScaleneTriangle extends AbstractTriangle {
 
-    public ScaleneTriangle(double a, double b, double c){
+    public ScaleneTriangle(double a, double b, double c) {
         super(a, b, c);
     }
 
     @Override
     public String toString() {
-        return "My " + this.getClass().getSimpleName() + " [parA=" + parA + ", parB=" + parB +", parC="+parC+"]";
+        return "My " + this.getClass().getSimpleName() + " [parA=" + parA + ", parB=" + parB + ", parC=" + parC + "]";
     }
 }

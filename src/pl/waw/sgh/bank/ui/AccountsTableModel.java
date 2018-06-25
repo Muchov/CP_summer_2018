@@ -11,7 +11,7 @@ import java.util.Vector;
 public class AccountsTableModel extends DefaultTableModel {
 
 
-    private static String[] cols = { "ID", "Type", "Currency", "Balance"};
+    private static String[] cols = {"ID", "Type", "Currency", "Balance"};
 
     private List<Account> accountList = new ArrayList<>();
 
@@ -45,7 +45,7 @@ public class AccountsTableModel extends DefaultTableModel {
     public Vector getVectorFromAccount(Account acc) {
         Vector vc = new Vector();
         vc.add(acc.getAccountID());
-        vc.add(acc.getClass().getSimpleName().replace("Account",""));
+        vc.add(acc.getClass().getSimpleName().replace("Account", ""));
         vc.add(acc.getCurrency());
         vc.add(acc.getBalance());
         return vc;
@@ -70,8 +70,7 @@ public class AccountsTableModel extends DefaultTableModel {
 
     @Override
     public boolean isCellEditable(int row, int col) {
-        if (col==0 || col==1) return false;
-        return true;
+        return col != 0 && col != 1;
     }
 
     @Override
@@ -83,7 +82,7 @@ public class AccountsTableModel extends DefaultTableModel {
                 acc.setCurrency(newVal.toString());
                 return;
             case 3:
-                acc.setBalance((BigDecimal)newVal);
+                acc.setBalance((BigDecimal) newVal);
                 return;
         }
     }

@@ -14,13 +14,11 @@ import java.util.regex.Pattern;
 
 //Program should start with "class" - obvious
 
-class Homework1
-{
-    private static boolean isValid(String email)
-    {
+class Homework1 {
+    private static boolean isValid(String email) {
         //Here I define what mail is. Email "syntax" is defined in the link from Wikipedia which I provided on the top
         //of this program.
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
                 "[a-zA-Z0-9_+&*-]+)*@" +
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
                 "A-Z]{2,7}$";
@@ -36,8 +34,7 @@ class Homework1
         return pattern.matcher(email).matches();
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //HERE WE WRITE THE EMAIL WE WANT TO VALIDATE
         String email = "maciej.piotr.mucha@gmail.pl";
         //IF statement, because we need to know if the email is valid or not

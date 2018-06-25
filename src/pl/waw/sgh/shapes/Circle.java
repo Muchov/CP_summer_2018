@@ -7,11 +7,11 @@ public class Circle extends Shape {
 
     @Override
     public double calcSurface() {
-        return Math.PI*Math.pow(parA,2);
+        return Math.PI * Math.pow(parA, 2);
     }
 
     @Override
     public double calcPerimeter() {
-        return 2*Math.PI*parA;
+        return 2 * Math.PI * parA;
     }
 }

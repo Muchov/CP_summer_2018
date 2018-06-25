@@ -77,13 +77,13 @@ public class Homework3 {
 
         else if
                 (arr[0][0] == -1 && arr[0][1] == -1 && arr[0][2] == -1 || // 1st row
-                arr[1][0] == -1 && arr[1][1] == -1 && arr[1][2] == -1 || // 2nd row
-                arr[2][0] == -1 && arr[2][1] == -1 && arr[2][2] == -1 || // 3rd row
-                arr[0][0] == -1 && arr[1][0] == -1 && arr[2][0] == -1 || // 1st column
-                arr[0][1] == -1 && arr[1][1] == -1 && arr[2][1] == -1 || // 2nd column
-                arr[0][2] == -1 && arr[1][2] == -1 && arr[2][2] == -1 || // 3rd column
-                arr[0][0] == -1 && arr[1][1] == -1 && arr[2][2] == -1 || // Diagonal(1)
-                arr[2][0] == -1 && arr[1][1] == -1 && arr[0][2] == -1) // Diagonal(2)
+                        arr[1][0] == -1 && arr[1][1] == -1 && arr[1][2] == -1 || // 2nd row
+                        arr[2][0] == -1 && arr[2][1] == -1 && arr[2][2] == -1 || // 3rd row
+                        arr[0][0] == -1 && arr[1][0] == -1 && arr[2][0] == -1 || // 1st column
+                        arr[0][1] == -1 && arr[1][1] == -1 && arr[2][1] == -1 || // 2nd column
+                        arr[0][2] == -1 && arr[1][2] == -1 && arr[2][2] == -1 || // 3rd column
+                        arr[0][0] == -1 && arr[1][1] == -1 && arr[2][2] == -1 || // Diagonal(1)
+                        arr[2][0] == -1 && arr[1][1] == -1 && arr[0][2] == -1) // Diagonal(2)
         {
 
             System.out.println("O wins");

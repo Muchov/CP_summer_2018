@@ -24,6 +24,6 @@ public class Rectangle {
     }
 
     public double calcSurface() {
-        return sideA*sideB;
+        return sideA * sideB;
     }
 }

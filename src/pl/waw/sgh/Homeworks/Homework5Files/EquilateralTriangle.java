@@ -7,7 +7,7 @@ now we specify the type (Equilateral/Isosceles/Scalene)
 
 public class EquilateralTriangle extends AbstractTriangle {
 
-    public EquilateralTriangle(double a, double b, double c){
+    public EquilateralTriangle(double a, double b, double c) {
         super(a, b, c);
     }
 

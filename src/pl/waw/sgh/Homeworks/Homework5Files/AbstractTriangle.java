@@ -21,7 +21,7 @@ public abstract class AbstractTriangle {
     protected Double parB = 0d;
     protected Double parC = 0d;
 
-    public AbstractTriangle (double a, double b, double c) { //constructor of scalene traingle
+    public AbstractTriangle(double a, double b, double c) { //constructor of scalene traingle
         set3Params(a, b, c);
     }
 
@@ -33,7 +33,7 @@ public abstract class AbstractTriangle {
 
     //https://www.wikihow.com/Calculate-the-Area-of-a-Triangle
     public double calcSurface() {
-        double p = (parA+parB+parC)/2;
-        return Math.sqrt(p*(p-parA)*(p-parB)*(p-parC));
+        double p = (parA + parB + parC) / 2;
+        return Math.sqrt(p * (p - parA) * (p - parB) * (p - parC));
     }
 }

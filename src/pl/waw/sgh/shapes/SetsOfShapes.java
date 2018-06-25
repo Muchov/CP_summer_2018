@@ -6,9 +6,9 @@ import java.util.Set;
 public class SetsOfShapes {
 
     public static void main(String[] args) {
-        ShapeCalculation s1 = new Rectangle(5,4);
+        ShapeCalculation s1 = new Rectangle(5, 4);
         ShapeCalculation s2 = new Circle(4);
-        ShapeCalculation s3 = new Rectangle(5,6);
+        ShapeCalculation s3 = new Rectangle(5, 6);
 
 
         Set<ShapeCalculation> shapeSet = new HashSet<>();
